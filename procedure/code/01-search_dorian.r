@@ -29,9 +29,9 @@ library(here)
 #this should launch a web browser and ask you to log in to twitter
 #replace app, consumer_key, and consumer_secret data with your own developer acct info
 twitter_token <- create_token(
-  app = "yourapp",  					#replace yourapp with your app name
-  consumer_key = "yourkey",  		#replace yourkey with your consumer key
-  consumer_secret = "yoursecret",  #replace yoursecret with your consumer secret
+  app = "spatial_hazards_visualization",  					#replace yourapp with your app name
+  consumer_key = "DAd1dk9D9w5biRFj5tOXuc2eg",  		#replace yourkey with your consumer key
+  consumer_secret = "",  #replace yoursecret with your consumer secret
   access_token = NULL,
   access_secret = NULL
 )

@@ -24,23 +24,25 @@ library(DBI)
 library(rccmisc)
 library(here)
 
+sf::sf_use_s2(TRUE)
+
 ############# TEMPORAL ANALYSIS ############# 
 
 #this is here as an example. change to the dorian3 data you processed in the previous script to try...
 
 #create temporal data frame & graph it
 
-dorian <- ts_data(dorian, by="hours")
-ts_plot(dorian, by="hours")
+dorianByHour <- ts_data(dorian3, by="hours")
+ts_plot(dorian3, by="hours")
 
 ############# NETWORK ANALYSIS ############# 
 
 #this is here as an example. change to the dorian3 data you processed in the previous script to try...
 
 #create network data frame. Other options for 'edges' in the network include mention, retweet, and reply
-dorianNetwork <- network_graph(dorian, c("quote"))
+dorianNetwork <- network_graph(dorian3, c("quote"))
 
-plot.igraph(winterTweetNetwork)
+plot.igraph(dorianNetwork)
 #Please, this is incredibly ugly... if you finish early return to this function and see if we can modify its parameters to improve aesthetics
 
 ############# TEXT / CONTEXTUAL ANALYSIS ############# 
@@ -101,7 +103,7 @@ dorianWordPairs %>%
 
 #first, sign up for a Census API here: https://api.census.gov/data/key_signup.html
 #replace the key text 'yourkey' with your own key!
-counties <- get_estimates("county",product="population",output="wide",geometry=TRUE,keep_geo_vars=TRUE, key="1fb2d48d1ae3f73a19d620f258ec9f823ad09b25")
+counties <- get_estimates("county",product="population",output="wide",geometry=TRUE,keep_geo_vars=TRUE)
 
 #select only the states you want, with FIPS state codes in quotes in the c() list
 #look up fips codes here: https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code 
@@ -127,7 +129,7 @@ ggplot() +
 #Connectign to Postgres
 #Create a con database connection with the dbConnect function.
 #Change the user and password to your own!
-con <- dbConnect(RPostgres::Postgres(), dbname='dsm', host='artemis', user='user', password='password') 
+con <- dbConnect(RPostgres::Postgres(), dbname='dsm', host='artemis', user='vincent', password='') 
 
 #list the database tables, to check if the database is working
 dbListTables(con) 
@@ -140,10 +142,16 @@ dbWriteTable(con,'dorian',doriansql, overwrite=TRUE)
 
 # try also writing the november tweet data to the database! Add code below:
 
+novembersql <- select(november,c("user_id","status_id","text","lat","lng"),starts_with("place"))
+
+dbWriteTable(con,'november',novembersql,overwrite=TRUE)
+
 # SQL to add geometry column of type point and crs NAD 1983: 
-# SELECT AddGeometryColumn ('schemaname','dorian','geom',4269,'POINT',2, false);
+# SELECT AddGeometryColumn ('vincent','dorian','geom',4269,'POINT',2, false);
+# SELECT AddGeometryColumn ('vincent','november','geom',4269,'POINT',2,false);
 # SQL to calculate geometry:
-# UPDATE dorian set geom = st_transform(st_makepoint(lng,lat),4326,4269);
+# UPDATE dorian set geom = st_transform(st_setsrid(st_makepoint(lng,lat),4326),4269);
+# UPDATE november set geom = st_transform(st_setsrid(st_makepoint(lng,lat),4326),4269);
 
 #make all lower-case names for counties, because PostGreSQL is not into capitalization
 
@@ -157,15 +165,40 @@ dbDisconnect(con)
 # Either in R or in PostGIS (via QGIS DB Manager)...
 
 # Count the number of dorian points in each county
+
+library(sf)
+
+spatialdorian <- dorian %>% mutate(geometry = NA)
+spatialdorian <- st_as_sf(dorian, coords = c('lng','lat'), crs = 4269)
+
+counties$doriancount <- lengths(st_intersects(counties, spatialdorian))
+
 # Count the number of november points in each county
+
+spatialnovember <- november %>% mutate(geometry = NA)
+spatialnovember <- st_as_sf(november, coords = c('lng','lat'), crs = 4269)
+
+counties$novembercount <- lengths(st_intersects(counties, spatialnovember))
+
+install.packages('s2')
+library(s2)
+
 # Set counties with no points to 0 for the november count
+
 # Calculate the normalized difference tweet index (made this up, based on NDVI), where
 # ndti = (tweets about storm – baseline twitter activity) / (tweets about storm + baseline twitter activity)
+
+counties$ndti <- (((counties$doriancount * 1.0) - counties$novembercount)/(counties$doriancount + counties$novembercount))
 # remember to multiply something by 1.0 so that you'll get decimal devision, not integer division
 # also if the denominator would end up being 0, set the result to 0
 
+counties$ndti[is.na(counties$ndti)] <- 0
+
+write_sf(counties, "data/derived/public/countydata.gpkg")
+
 # Either in QGIS or in R...
 # Map the normalized tweet difference index for Hurricane Dorian
+
 # Try using the heatmap symbology in QGIS to visualize kernel density of tweets
 
 ############### CREATE YOUR OWN TWITTER QUERY ###############
