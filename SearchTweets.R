@@ -50,3 +50,5 @@ baseline <- search_tweets("",
                           token=twitter_token,
                           geocode="34.75,-92.29,1000mi",
                           retryonratelimit=TRUE)
+
+saveRDS(baseline,here("data","derived","private","baseline.RDS") )
