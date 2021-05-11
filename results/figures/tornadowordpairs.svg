@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 750.7 612" style="enable-background:new 0 0 750.7 612;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
@@ -102,21 +102,20 @@
 	.st96{font-family:'Alice-Regular';}
 	.st97{font-size:14px;}
 	.st98{font-size:11px;}
-	.st99{font-size:12px;}
+	.st99{font-size:12.0006px;}
 	.st100{font-size:8.54px;}
-	.st101{enable-background:new    ;}
-	.st102{fill:#FFFFFF;stroke:#77CDFC;stroke-width:0.5;stroke-miterlimit:10;}
-	.st103{font-size:13px;}
-	.st104{fill:none;stroke:#000000;stroke-width:5.25;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:0.36;}
-	.st105{fill:none;stroke:#000000;stroke-width:8.92;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:0.67;}
-	.st106{fill:none;stroke:#000000;stroke-width:12.59;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:0.98;}
-	.st107{font-size:8.8px;}
-	.st108{font-size:18px;}
+	.st101{fill:#FFFFFF;stroke:#77CDFC;stroke-width:0.5;stroke-miterlimit:10;}
+	.st102{font-size:13px;}
+	.st103{fill:none;stroke:#000000;stroke-width:5.25;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:0.36;}
+	.st104{fill:none;stroke:#000000;stroke-width:8.92;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:0.67;}
+	.st105{fill:none;stroke:#000000;stroke-width:12.59;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:0.98;}
+	.st106{font-size:8.8px;}
+	.st107{font-size:18px;}
 </style>
-<g id="Layer_2">
+<g id="Layer_2_1_">
 	<rect class="st0" width="750.7" height="612"/>
 </g>
-<g id="Layer_1">
+<g id="Layer_1_1_">
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<polyline class="st2" points="473.3,304.1 473.5,303.7 473.7,303.2 473.8,302.7 474,302.2 474.2,301.8 474.3,301.3 474.5,300.8 
 		474.7,300.3 474.9,299.8 475,299.4 475.2,298.9 475.4,298.4 475.5,297.9 475.7,297.5 475.9,297 476,296.5 476.2,296 476.4,295.5 
@@ -2081,7 +2080,7 @@
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<circle class="st94" cx="668.3" cy="336.3" r="3.6"/>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
-	<circle class="st94" cx="513.1" cy="484" r="3.6"/>
+	<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 -46.84 912.9462)" class="st94" cx="513.1" cy="484" rx="3.6" ry="3.6"/>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<circle class="st94" cx="576.2" cy="292.7" r="3.6"/>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
@@ -2119,7 +2118,8 @@
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<circle class="st94" cx="608.4" cy="210.9" r="3.6"/>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
-	<circle class="st94" cx="512.1" cy="212.5" r="3.6"/>
+	
+		<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 220.3144 683.9486)" class="st94" cx="512.1" cy="212.5" rx="3.6" ry="3.6"/>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<circle class="st94" cx="128.5" cy="289.8" r="3.6"/>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
@@ -2197,17 +2197,17 @@
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<text transform="matrix(1 0 0 1 540.55 316.89)" class="st95 st96 st98">00</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
-	<text transform="matrix(0.9884 -0.1522 0.1522 0.9884 166.9521 158.3524)" class="st95 st96 st99">severe</text>
+	<text transform="matrix(0.9884 -0.1522 0.1522 0.9884 166.9525 158.3533)" class="st95 st96 st99">severe</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
-	<text transform="matrix(0.9884 -0.1522 0.1522 0.9884 145.72 260.5501)" class="st95 st96 st99">warning</text>
+	<text transform="matrix(0.9884 -0.1522 0.1522 0.9884 145.7207 260.5505)" class="st95 st96 st99">warning</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
-	<text transform="matrix(0.9884 -0.1522 0.1522 0.9884 150.7798 326.042)" class="st95 st96 st99">radar</text>
+	<text transform="matrix(0.9884 -0.1522 0.1522 0.9884 150.7802 326.0424)" class="st95 st96 st99">radar</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
-	<text transform="matrix(0.9884 -0.1522 0.1522 0.9884 178.0847 212.7002)" class="st95 st96 st99">thunderstorm</text>
+	<text transform="matrix(0.9884 -0.1522 0.1522 0.9884 178.0848 212.7003)" class="st95 st96 st99">thunderstorm</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
-	<text transform="matrix(0.9884 -0.1522 0.1522 0.9884 159.0152 436.36)" class="st95 st96 st99">mph</text>
+	<text transform="matrix(0.9884 -0.1522 0.1522 0.9884 159.0153 436.3603)" class="st95 st96 st99">mph</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
-	<text transform="matrix(0.9884 -0.1522 0.1522 0.9884 103.7284 383.652)" class="st95 st96 st99">hail</text>
+	<text transform="matrix(0.9884 -0.1522 0.1522 0.9884 103.729 383.6527)" class="st95 st96 st99">hail</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<text transform="matrix(1 0 0 1 48.59 360.47)" class="st95 st96 st100">lt</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
@@ -2284,7 +2284,8 @@
 	<text transform="matrix(1 0 0 1 237.5 573.36)" class="st95 st96 st100">occur</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<rect x="369" y="463" class="st1" width="9" height="10.1"/>
-	<text transform="matrix(1 0 0 1 368.9902 469.9844)" class="st101"><tspan x="0" y="0" class="st95 st96 st100">s</tspan><tspan x="4.7" y="0" class="st95 st96 st100">e</tspan></text>
+	<text transform="matrix(1 0 0 1 368.9902 469.9844)" class="st95 st96 st100">s</text>
+	<text transform="matrix(1 0 0 1 373.6902 469.9844)" class="st95 st96 st100">e</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<text transform="matrix(1 0 0 1 206.83 262.1)" class="st95 st96 st100">gt</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
@@ -2321,7 +2322,8 @@
 	<text transform="matrix(1 0 0 1 556.7803 365.4346)" class="st95 st96 st100">3</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<rect x="545.4" y="541.4" class="st1" width="9" height="10.1"/>
-	<text transform="matrix(1 0 0 1 545.3799 548.3252)" class="st101"><tspan x="0" y="0" class="st95 st96 st100">e</tspan><tspan x="5.2" y="0" class="st95 st96 st100">s</tspan></text>
+	<text transform="matrix(1 0 0 1 545.3799 548.3252)" class="st95 st96 st100">e</text>
+	<text transform="matrix(1 0 0 1 550.5799 548.3252)" class="st95 st96 st100">s</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<text transform="matrix(1 0 0 1 495.44 80.33)" class="st95 st96 st100">north</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
@@ -2409,7 +2411,8 @@
 	<text transform="matrix(1 0 0 1 439.19 358.07)" class="st95 st96 st98">edt</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<rect x="86" y="246" class="st1" width="22.8" height="10.1"/>
-	<text transform="matrix(1 0 0 1 85.9702 252.9951)" class="st101"><tspan x="0" y="0" class="st95 st96 st100">effec</tspan><tspan x="19.6" y="0" class="st95 st96 st100">t</tspan></text>
+	<text transform="matrix(1 0 0 1 85.9702 252.9951)" class="st95 st96 st100">effec</text>
+	<text transform="matrix(1 0 0 1 105.5702 252.9951)" class="st95 st96 st100">t</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<text transform="matrix(1 0 0 1 167.02 290.2)" class="st95 st96 st100">including</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
@@ -2457,7 +2460,8 @@
 	<text transform="matrix(1 0 0 1 533.6003 496.594)" class="st95 st96 st100">uninoticias</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<rect x="176.4" y="545.4" class="st1" width="19" height="10.1"/>
-	<text transform="matrix(1 0 0 1 176.3599 552.3145)" class="st101"><tspan x="0" y="0" class="st95 st96 st100">201</tspan><tspan x="15.3" y="0" class="st95 st96 st100">1</tspan></text>
+	<text transform="matrix(1 0 0 1 176.3599 552.3145)" class="st95 st96 st100">201</text>
+	<text transform="matrix(1 0 0 1 191.6599 552.3145)" class="st95 st96 st100">1</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<text transform="matrix(1 0 0 1 493.44 401.72)" class="st95 st96 st100">ago</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
@@ -2479,29 +2483,32 @@
 	<text transform="matrix(1 0 0 1 412.2 305.77)" class="st95 st96 st100">mdt</text>
 	<rect y="17.7" class="st1" width="744" height="594.3"/>
 	<text transform="matrix(1 0 0 1 696.51 397.77)" class="st95 st96 st100">29</text>
-	<path class="st102" d="M703.5,581.1h-33c-4.9,0-8.9-4-8.9-8.9v-60.1c0-4.9,4-8.9,8.9-8.9h33c4.9,0,8.9,4,8.9,8.9v60.1
+	<path class="st101" d="M703.5,581.1h-33c-4.9,0-8.9-4-8.9-8.9v-60.1c0-4.9,4-8.9,8.9-8.9h33c4.9,0,8.9,4,8.9,8.9v60.1
 		C712.4,577.1,708.4,581.1,703.5,581.1z"/>
 	<rect class="st1" width="792" height="612"/>
 	<rect x="685" y="505.4" class="st1" width="9.6" height="13"/>
-	<text transform="matrix(1 0 0 1 684.9774 515.9563)" class="st95 st96 st103">n</text>
+	<text transform="matrix(1 0 0 1 684.9774 515.9563)" class="st95 st96 st102">n</text>
 	<rect class="st1" width="792" height="612"/>
-	<line class="st104" x1="668.3" y1="529.1" x2="682.2" y2="529.1"/>
+	<line class="st103" x1="668.3" y1="529.1" x2="682.2" y2="529.1"/>
 	<rect class="st1" width="792" height="612"/>
-	<line class="st105" x1="668.3" y1="546.4" x2="682.2" y2="546.4"/>
+	<line class="st104" x1="668.3" y1="546.4" x2="682.2" y2="546.4"/>
 	<rect class="st1" width="792" height="612"/>
-	<line class="st106" x1="668.3" y1="563.7" x2="682.2" y2="563.7"/>
+	<line class="st105" x1="668.3" y1="563.7" x2="682.2" y2="563.7"/>
 	<rect class="st1" width="792" height="612"/>
 	<rect x="685" y="525" class="st1" width="19.6" height="10.4"/>
-	<text transform="matrix(1 0 0 1 684.9772 532.192)" class="st101"><tspan x="0" y="0" class="st95 st96 st107">100</tspan><tspan x="14.4" y="0" class="st95 st96 st107">0</tspan></text>
+	<text transform="matrix(1 0 0 1 684.9772 532.192)" class="st95 st96 st106">100</text>
+	<text transform="matrix(1 0 0 1 698.9155 532.192)" class="st95 st96 st106">0</text>
 	<rect class="st1" width="792" height="612"/>
 	<rect x="685" y="542" class="st1" width="20.9" height="10.4"/>
-	<text transform="matrix(1 0 0 1 684.9772 549.1509)" class="st101"><tspan x="0" y="0" class="st95 st96 st107">200</tspan><tspan x="15.7" y="0" class="st95 st96 st107">0</tspan></text>
+	<text transform="matrix(1 0 0 1 684.9772 549.1509)" class="st95 st96 st106">200</text>
+	<text transform="matrix(1 0 0 1 699.4592 549.1509)" class="st95 st96 st106">0</text>
 	<rect class="st1" width="792" height="612"/>
 	<rect x="685.6" y="558.6" class="st1" width="20.2" height="10.4"/>
-	<text transform="matrix(1 0 0 1 685.6339 565.8025)" class="st101"><tspan x="0" y="0" class="st95 st96 st107">300</tspan><tspan x="15.1" y="0" class="st95 st96 st107">0</tspan></text>
-	<path class="st102" d="M287.5,50.1H26.4c-6,0-10.9-4.9-10.9-10.9v-9.4c0-6,4.9-10.9,10.9-10.9h261.1c6,0,10.9,4.9,10.9,10.9v9.4
+	<text transform="matrix(1 0 0 1 685.6339 565.8025)" class="st95 st96 st106">300</text>
+	<text transform="matrix(1 0 0 1 700.2205 565.8025)" class="st95 st96 st106">0</text>
+	<path class="st101" d="M287.5,50.1H26.4c-6,0-10.9-4.9-10.9-10.9v-9.4c0-6,4.9-10.9,10.9-10.9h261.1c6,0,10.9,4.9,10.9,10.9v9.4
 		C298.4,45.2,293.5,50.1,287.5,50.1z"/>
 	<rect class="st1" width="792" height="612"/>
-	<text transform="matrix(1 0 0 1 36.8888 39.7886)" class="st95 st96 st108">Word Pairs in Tornado Tweets</text>
+	<text transform="matrix(1 0 0 1 36.8888 39.7886)" class="st95 st96 st107">Word Pairs in Tornado Tweets</text>
 </g>
 </svg>
