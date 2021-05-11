@@ -32,4 +32,13 @@ write.table(tornado$status_id,
             here("data","derived","public","tornadoids.txt"),
             append=FALSE, quote=FALSE, row.names = FALSE, col.names = FALSE)
 
+count(baseline, place_type)
 
+baseline = lat_lng(baseline, coords=c("coords_coords"))
+baseline = subset(baseline,
+                  place_type == 'city'| place_type == 'neighborhood'|
+                    place_type == 'poi' | !is.na(lat))
+baseline = lat_lng(baseline,coords=c("bbox_coords"))
+count(baseline, place_type)
+
+saveRDS(baseline, here("data", "derived","private","baseline_processed.RDS"))

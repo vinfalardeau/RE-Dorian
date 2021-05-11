@@ -1,7 +1,7 @@
 #search geographic twitter data for Hurricane Dorian, by Joseph Holler, 2019,2020
-#to search, you first need a twitter API token: https://rtweet.info/articles/auth.html 
+#to search, you first need a twitter API token: https://rtweet.info/articles/auth.html
 
-#this script contains the code that was used to create the dorian and november data frames in dorian.Rdata. 
+#this script contains the code that was used to create the dorian and november data frames in dorian.Rdata.
 #note that this code will no longer work as originally run, because the code is time-sensitive.
 #for students in GG323, read the code for how the data was searched, and then run the final block
 #of code to download and load the resutls in Rdata format.
@@ -14,9 +14,9 @@ install.packages(setdiff(packages, rownames(installed.packages())), quietly=TRUE
 library(rtweet)
 library(here)
 
-############# SEARCH TWITTER API ############# 
+############# SEARCH TWITTER API #############
 
-#reference for search_tweets function: https://rtweet.info/reference/search_tweets.html 
+#reference for search_tweets function: https://rtweet.info/reference/search_tweets.html
 #don't add any spaces in between variable name and value. i.e. n=1000 is better than n = 1000
 #the first parameter in quotes is the search string, searching tweet contents and hashtags
 #n=10000 asks for 10,000 tweets
@@ -30,8 +30,8 @@ library(here)
 #replace app, consumer_key, and consumer_secret data with your own developer acct info
 twitter_token <- create_token(
   app = "spatial_hazards_visualization",  					#replace yourapp with your app name
-  consumer_key = "DAd1dk9D9w5biRFj5tOXuc2eg",  		#replace yourkey with your consumer key
-  consumer_secret = "",  #replace yoursecret with your consumer secret
+  consumer_key = "yourkey",  		#replace yourkey with your consumer key
+  consumer_secret = "yoursecret",  #replace yoursecret with your consumer secret
   access_token = NULL,
   access_secret = NULL
 )
@@ -45,7 +45,7 @@ dorian <- search_tweets("dorian OR hurricane OR sharpiegate", n=200000, include_
 november <- search_tweets("-filter:verified OR filter:verified", n=200000, include_rts=FALSE, token=twitter_token, geocode="32,-78,1000mi", retryonratelimit=TRUE)
 
 
-############# LOAD THESE RESULTS - GEOG323 STUDENTS ONLY ############# 
+############# LOAD THESE RESULTS - GEOG323 STUDENTS ONLY #############
 
 # Please download the file from here: https://github.com/GIS4DEV/literature/raw/master/dorian/dorian.RData
 # into the data\derived\private folder
@@ -55,7 +55,7 @@ load(here("data","derived","private","dorian.RData"))
 
 # In the following code, you can practice running the queries on dorian3
 
-############# FIND ONLY PRECISE GEOGRAPHIES ############# 
+############# FIND ONLY PRECISE GEOGRAPHIES #############
 
 #reference for lat_lng function: https://rtweet.info/reference/lat_lng.html
 #adds a lat and long field to the data frame, picked out of the fields you indicate in the c() list
@@ -80,5 +80,3 @@ november <- subset(november, place_type == 'city'| place_type == 'neighborhood'|
 #convert bounding boxes into centroids for lat and lng columns
 dorian <- lat_lng(dorian,coords=c("bbox_coords"))
 november <- lat_lng(november,coords=c("bbox_coords"))
-
-

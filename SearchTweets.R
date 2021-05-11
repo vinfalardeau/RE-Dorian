@@ -5,8 +5,8 @@ library(rehydratoR)
 
 twitter_token = create_token(
   app = "spatial_hazards_visualization",                     #enter your app name in quotes
-  consumer_key = "DAd1dk9D9w5biRFj5tOXuc2eg",  		      #enter your consumer key in quotes
-  consumer_secret = "6qjg84ihSjAcqmtZMLuoQqpJFBAFCbq0vkvOjCc74i7WOnmsMc",         #enter your consumer secret in quotes
+  consumer_key = "",  		      #enter your consumer key in quotes
+  consumer_secret = "",         #enter your consumer secret in quotes
   access_token = NULL,
   access_secret = NULL
 )

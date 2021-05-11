@@ -1,7 +1,7 @@
 # analyze twitter data, by Joseph Holler, 2019
 #following tutorial at https://www.earthdatascience.org/courses/earth-analytics/get-data-using-apis/use-twitter-api-r/
 #also get advice from the rtweet page: https://rtweet.info/
-#to do anything, you first need a twitter API token: https://rtweet.info/articles/auth.html 
+#to do anything, you first need a twitter API token: https://rtweet.info/articles/auth.html
 
 #install packages for twitter, census, data management, and mapping
 packages = c("rtweet","tidycensus","tidytext","maps","RPostgres","igraph","tm", "ggplot2","RColorBrewer","rccmisc","ggraph","here")
@@ -26,7 +26,7 @@ library(here)
 
 sf::sf_use_s2(TRUE)
 
-############# TEMPORAL ANALYSIS ############# 
+############# TEMPORAL ANALYSIS #############
 
 #this is here as an example. change to the dorian3 data you processed in the previous script to try...
 
@@ -35,7 +35,7 @@ sf::sf_use_s2(TRUE)
 dorianByHour <- ts_data(dorian3, by="hours")
 ts_plot(dorian3, by="hours")
 
-############# NETWORK ANALYSIS ############# 
+############# NETWORK ANALYSIS #############
 
 #this is here as an example. change to the dorian3 data you processed in the previous script to try...
 
@@ -45,7 +45,7 @@ dorianNetwork <- network_graph(dorian3, c("quote"))
 plot.igraph(dorianNetwork)
 #Please, this is incredibly ugly... if you finish early return to this function and see if we can modify its parameters to improve aesthetics
 
-############# TEXT / CONTEXTUAL ANALYSIS ############# 
+############# TEXT / CONTEXTUAL ANALYSIS #############
 
 #remove urls, fancy formatting, etc. in other words, clean the text content
 dorianText = dorian %>% select(text) %>% plain_tweets()
@@ -61,7 +61,7 @@ data("stop_words")
 stop_words = stop_words %>% add_row(word="t.co",lexicon = "SMART")
 
 #delete stop words from dorianWords with an anti_join
-dorianWords =  dorianWords %>% anti_join(stop_words) 
+dorianWords =  dorianWords %>% anti_join(stop_words)
 
 # how many words after removing the stop words?
 count(dorianWords)
@@ -79,7 +79,7 @@ dorianWords %>%
        y = "Unique words",
        title = "Count of unique words found in tweets")
 
-dorianWordPairs = dorianText %>% 
+dorianWordPairs = dorianText %>%
   mutate(text = removeWords(text, stop_words$word)) %>%
   unnest_tokens(paired_words, text, token = "ngrams", n = 2)
 
@@ -99,14 +99,14 @@ dorianWordPairs %>%
        x = "", y = "") +
   theme_void()
 
-############# SPATIAL ANALYSIS ############# 
+############# SPATIAL ANALYSIS #############
 
 #first, sign up for a Census API here: https://api.census.gov/data/key_signup.html
 #replace the key text 'yourkey' with your own key!
 counties <- get_estimates("county",product="population",output="wide",geometry=TRUE,keep_geo_vars=TRUE)
 
 #select only the states you want, with FIPS state codes in quotes in the c() list
-#look up fips codes here: https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code 
+#look up fips codes here: https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code
 counties = filter(counties,STATEFP %in% c('54', '51', '50', '47', '45', '44', '42', '39', '37','36', '34', '33', '29', '28', '25', '24', '23', '22', '21', '18', '17','13', '12', '11', '10', '09', '05', '01') )
 
 #map results with GGPlot
@@ -129,10 +129,10 @@ ggplot() +
 #Connectign to Postgres
 #Create a con database connection with the dbConnect function.
 #Change the user and password to your own!
-con <- dbConnect(RPostgres::Postgres(), dbname='dsm', host='artemis', user='vincent', password='') 
+con <- dbConnect(RPostgres::Postgres(), dbname='dsm', host='artemis', user='user', password='password') 
 
 #list the database tables, to check if the database is working
-dbListTables(con) 
+dbListTables(con)
 
 #create a simple table for uploading
 doriansql <- select(dorian,c("user_id","status_id","text","lat","lng"),starts_with("place"))
@@ -146,7 +146,7 @@ novembersql <- select(november,c("user_id","status_id","text","lat","lng"),start
 
 dbWriteTable(con,'november',novembersql,overwrite=TRUE)
 
-# SQL to add geometry column of type point and crs NAD 1983: 
+# SQL to add geometry column of type point and crs NAD 1983:
 # SELECT AddGeometryColumn ('vincent','dorian','geom',4269,'POINT',2, false);
 # SELECT AddGeometryColumn ('vincent','november','geom',4269,'POINT',2,false);
 # SQL to calculate geometry:
