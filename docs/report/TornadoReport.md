@@ -61,7 +61,7 @@ Outline the data to be used in your replication study, including:
 
 ![Word Network Graph](/results/figures/tornadowordpairs.png)
 
-![NDTI MAP](/results/figures/ndti_map.svg)
+![NDTI MAP](/results/figures/ndti_map.png)
 
 - map of twitter activity
 - hot spot analysis
