@@ -63,8 +63,7 @@ Outline the data to be used in your replication study, including:
 
 ![NDTI MAP](/results/figures/ndti_map.png)
 
-- map of twitter activity
-- hot spot analysis
+![Clusters Map](/results/figures/cluster_map.png)
 
 ## Unplanned Deviations from the Protocol
 

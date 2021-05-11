@@ -137,7 +137,7 @@ counties2$locG = as.vector(localG(counties2$torrate, listw = dwm2,
 
 summary(counties2$locG)
 
-siglevel = c(1.15,1.95)
+siglevel = c(1.645,1.96)
 counties2 = counties2 %>% 
   mutate(sig = cut(locG, c(min(counties2$locG),
                            siglevel[2]*-1,
@@ -158,8 +158,8 @@ states = filter(states,
                                  '39','21','54','51','47','28',
                                  '37','45','01','13','12') )
 
-ggplot() +
-  geom_sf(data=counties2, aes(fill=sig), color="white", lwd=0.07)+
+clustermap=ggplot() +
+  geom_sf(data=counties2rep, aes(fill=sig), color="white", lwd=0.07)+
   scale_fill_manual(
     values = c("#0000FF80", "#8080FF80", "#FFFFFF80", "#FF808080", "#FF000080"),
     labels = c("very low","low", "insignificant","high"),
@@ -185,5 +185,5 @@ ndtimap=ggplot()+
                       aesthetics = "fill")+
   geom_sf(data=states, fill = NA, color = "black", lwd=0.12)
 
-ggsave(here("results","figures","ndti_map.svg"),plot = ndtimap, width=11,height=8.5,units="in")
+ggsave(here("results","figures","cluster_map.svg"),plot = clustermap, width=11,height=7,units="in")
 
