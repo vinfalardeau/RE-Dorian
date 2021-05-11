@@ -55,7 +55,7 @@ Outline the data to be used in your replication study, including:
 
 ## Replication Results
 
-![Temporal Analysis Graph](/results/figures/tornadoByHour.png)
+![Temporal Analysis Graph](/results/figures/tornadoByHour.svg)
 
 - content analysis graph
 - map of twitter activity
