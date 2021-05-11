@@ -7,17 +7,17 @@ title: RE- Spatial-temporal and content analysis of Twitter Data
 **Replication of**
 # Spatial, temporal and content analysis of Twitter data
 
-Original study *by* Wang, Z., X. Ye, and M. H. Tsou. 2016. Spatial, temporal, and content analysis of Twitter for wildfire hazards. *Natural Hazards* 83 (1):523–540. DOI:[10.1007/s11069-016-2329-6](https://doi.org/10.1007/s11069-016-2329-6).
+Original study *by* Wang, Z., X. Ye, and M. H. Tsou. 2016. Spatial, temporal, and content analysis of Twitter for wildfire hazards. *Natural Hazards* 83 (1):523–540. DOI:[10.1007/s11069-016-2329-6](https://doi.org/10.1007/s11069-016-2329-6),  
 and
 First replication study by Holler, J. 2021 (in preparation). Hurricane Dorian vs Sharpie Pen: an empirical test of social amplification of risk on social media.
 
 Replication Author:
-Your Name
+Vincent Falardeau
 
 Replication Materials Available at: [github repository name](github repository link)
 
-Created: `DD Month YYYY`
-Revised: `DD Month YYYY`
+Created: `11 May 2021`
+Revised: `11 May 2021`
 
 ## Abstract
 
@@ -60,6 +60,8 @@ Outline the data to be used in your replication study, including:
 ![Word Counts Graph](/results/figures/tornadowordcounts.png)
 
 ![Word Network Graph](/results/figures/tornadowordpairs.png)
+
+![NDTI MAP](/results/figures/ndti_map.svg)
 
 - map of twitter activity
 - hot spot analysis

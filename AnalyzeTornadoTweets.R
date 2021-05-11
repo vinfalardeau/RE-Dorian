@@ -172,13 +172,18 @@ ggplot() +
         axis.title.x=element_blank(),
         axis.title.y=element_blank())
 
-ggplot()+
-  geom_sf(data=counties2, aes(fill=ndti), color="white", lwd=0.07)+
-  scale_fill_gradient2(low = "#ff5555",
-                      high = "#5555ff",
-                      mid = "#cccccc",
+counties2rep=st_transform(counties2,crs = "ESRI:102003")
+
+ndtimap=ggplot()+
+  geom_sf(data=counties2rep, aes(fill=ndti), color="white", lwd=0.07)+
+  scale_fill_gradient2(low = "#bd460a",
+                      high = "#42b9f5",
+                      mid = "#dddddd",
                       space = "Lab",
                       na.value = "grey50",
                       guide = "colourbar",
                       aesthetics = "fill")+
   geom_sf(data=states, fill = NA, color = "black", lwd=0.12)
+
+ggsave(here("results","figures","ndti_map.svg"),plot = ndtimap, width=11,height=8.5,units="in")
+
