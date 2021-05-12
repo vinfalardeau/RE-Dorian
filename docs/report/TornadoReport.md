@@ -1,6 +1,6 @@
 ---
 layout: page
-title: RE- Spatial-temporal and content analysis of Twitter Data
+title:
 ---
 
 
@@ -23,13 +23,13 @@ Revised: `11 May 2021`
 
 Why study the spatial distribution of Twitter data?
 
-Wang et al (2016) analyzed Twitter data for wildfires in California, finding that the social media data ...
+Wang, Ye, and Tsou (2016) analyzed Twitter data for wildfires in California, finding that the social media data reflect increased situational awareness on the part of local people during hazardous weather events. Wang, Ye, and Tsou also examined trends (key words and word clusters) in the content of wildfire-related tweets, identified moments when tweets peaked, and charted a retweet network. The spatial distribution of Twitter activity can reveal to what degree the activity's geography concurs with the geography of real-world events, like the wildfires in California. Spatial Twitter data can also be linked to populations (of cities, counties, etc) to see just who is affected and how they are responding.
 
 Holler (2021) is studying Twitter data for Hurricane Dorian on the Atlantic coast, finding that in spite of tending news and social media content regarding a false narrative of risk, original Tweets still clustered significantly along the real hurricane track, and only along the hurricane track.
 
-Reproducing and replicating spatial research of .....  continues to be relevant because ....
+Reproducing and replicating spatial research with respect to the overlap of social media and hazardous weather continues to be relevant because people often turn to online platforms to share status updates during natural disasters, to check and share local news, and to comment on emerging situations. There are important ethical questions around privacy and the use of geo-tagged social media content; at the same time, such content can also be used to pinpoint places and people in need of aid. As people become more aware of privacy concerns & social media platforms are kept a little bit more honest, geo-located social media data might become more rare – already, the proportion of tweets with spatial information is under 5 percent. Even so, the sheer volume is great enough that spatial research can provide meaningful results, and will continue to do so well into the future.
 
-In his replication study, I will ...
+In this replication study, I turn from the wildfires of California and the track of Hurricane Dorian to Tornado Alley, conducting another  spatial, temporal, and content analysis for tweets between April 27th and May 4th, 2021 containing the keyword 'tornado.' Over the course of those eight days, there were several tornadoes between EF-1 (moderate damage) and EF-3 (severe damage) on the Enhanced Fujita scale, located primarily in the South and the Great Plains.
 
 
 
