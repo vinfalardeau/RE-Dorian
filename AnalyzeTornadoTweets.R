@@ -174,7 +174,7 @@ clustermap=ggplot() +
 
 counties2rep=st_transform(counties2,crs = "ESRI:102003")
 
-ndtimap=ggplot()+
+ggplot()+
   geom_sf(data=counties2rep, aes(fill=ndti), color="white", lwd=0.07)+
   scale_fill_gradient2(low = "#bd460a",
                       high = "#42b9f5",
@@ -185,5 +185,5 @@ ndtimap=ggplot()+
                       aesthetics = "fill")+
   geom_sf(data=states, fill = NA, color = "black", lwd=0.12)
 
-ggsave(here("results","figures","cluster_map.svg"),plot = clustermap, width=11,height=7,units="in")
+ggsave(here("results","figures","ndti_map2.svg"),plot = ndtimap, width=11,height=7,units="in")
 

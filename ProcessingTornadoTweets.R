@@ -11,6 +11,10 @@ tornadoesids =
   data.frame(read.table(here("data","raw","public","tornadoesids.txt"),
                         numerals = 'no.loss'))
 
+write.table(baseline_raw$status_id,
+            here("data","raw","public","baselineids.txt"),
+            append=FALSE, quote=FALSE, row.names = FALSE, col.names = FALSE)
+
 tornadoes_raw = rehydratoR(twitter_token$app$key, twitter_token$app$secret,
                         twitter_token$credentials$oauth_token,
                         twitter_token$credentials$oauth_secret, tornadoesids,
