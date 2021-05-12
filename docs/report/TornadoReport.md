@@ -23,7 +23,7 @@ Revised: `11 May 2021`
 
 Why study the spatial distribution of Twitter data?
 
-Wang, Ye, and Tsou (2016) analyzed Twitter data for wildfires in California, finding that the social media data reflect increased situational awareness on the part of local people during hazardous weather events. Wang, Ye, and Tsou also examined trends (key words and word clusters) in the content of wildfire-related tweets, identified moments when tweets peaked, and charted a retweet network. The spatial distribution of Twitter activity can reveal to what degree the activity's geography concurs with the geography of real-world events, like the wildfires in California. Spatial Twitter data can also be linked to populations (of cities, counties, etc) to see just who is affected and how they are responding.
+Wang et al (2016) analyzed Twitter data for wildfires in California, finding that the social media data reflect increased situational awareness on the part of local people during hazardous weather events. Wang et al also examined trends (key words and word clusters) in the content of wildfire-related tweets, identified moments when tweets peaked, and charted a retweet network. The spatial distribution of Twitter activity can reveal to what degree the activity's geography concurs with the geography of real-world events, like the wildfires in California. Spatial Twitter data can also be linked to populations (of cities, counties, etc) to see just who is affected and how they are responding.
 
 Holler (2021) is studying Twitter data for Hurricane Dorian on the Atlantic coast, finding that in spite of tending news and social media content regarding a false narrative of risk, original Tweets still clustered significantly along the real hurricane track, and only along the hurricane track.
 
@@ -37,12 +37,12 @@ In this replication study, I turn from the wildfires of California and the track
 
 **summarize Wang et al (2016) similar to the Holler (2021) summary below**
 
-Holler (2021) losely replicated the methods of Wang et al (2016) for the case of Hurricane Dorian's landfall on the U.S. mainland during the 2019 Atlantic Hurricane season. Data was based on Twitter Search API queries for ....
+Holler (2021) loosely replicated the methods of Wang et al (2016) for the case of Hurricane Dorian's landfall on the U.S. mainland during the 2019 Atlantic Hurricane season. Data was based on Twitter Search API queries for tweets (excluding retweets) within a 1000-mile search radius encompassing the eastern half of the US.
 
-Holler modified Wang et al's methods by not searching for retweets for network analysis, focusing instead on original Tweet content with keywords hurricane, Dorian, or sharpiegate (a trending hashtag referring to the storm). Holler modified the methodology for normalizing tweet data by creating a normalized Tweet difference index and extended teh methodology to test for spatial cluserting with the local Getis-Ord statistic. The study tested a hypothesis that false narratives of hurricane risk promulgated at the highest levels of the United States government would significantly distort the geographic distribution of Twitter activity related to the hurricane and its impacts, finding that original Twitter data still clustered only in the affected areas of the Atlantic coast in spite of false narratives about risk of a westward track through Alabama.
+Holler modified Wang et al's methods by not searching for retweets for network analysis, focusing instead on original Tweet content with keywords hurricane, Dorian, or sharpiegate (a trending hashtag referring to the storm). Holler modified the methodology for normalizing tweet data by creating a normalized Tweet difference index and extended the methodology to test for spatial clustering with the local Getis-Ord statistic. The study tested a hypothesis that false narratives of hurricane risk promulgated at the highest levels of the United States government would significantly distort the geographic distribution of Twitter activity related to the hurricane and its impacts, finding that original Twitter data still clustered only in the affected areas of the Atlantic coast in spite of false narratives about risk of a westward track through Alabama.
 
 Wang et al (2016) conducted their study using the `tm` and `igraph` packages in `R 3.1.2`. Is it known what GIS software was used for spatial analysis?
-The replication study by Holler (2021) used R, including the rtweet, rehydratoR, igraph, sf, and spdep packages for analysis.
+The replication study by Holler (2021) used R, including the rtweet, rehydratoR, igraph, sf, and spdep packages for analysis. My replication closely follows the methods used by Holler (2021) in R, applying the same packages and code to a different subject.
 
 ## Materials and Procedure
 
@@ -73,7 +73,7 @@ Summarize changes and uncertainties between
 
 ## Discussion
 
-Provide a summary and interpretation of your key findings in relation to your research question. Mention if findings confirm or contradict patterns observed by Wang et al (2016) or by Holler (2
+Provide a summary and interpretation of your key findings in relation to your research question. Mention if findings confirm or contradict patterns observed by Wang et al (2016) or by Holler (2021).
 
 ## Conclusion
 
